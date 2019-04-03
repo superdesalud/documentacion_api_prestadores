@@ -107,8 +107,6 @@ Estructura JSON/FHIR de salida
 
 
 
-
-
 Estructura JSON
 ---------------
 
