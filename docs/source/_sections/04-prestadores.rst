@@ -30,8 +30,8 @@ Puede leer la documentación del estándar en https://www.hl7.org/fhir/practitio
 
 
 
-Estructura JSON/FHIR de salida
-------------------------------
+Estructura FHIR
+---------------
 
 
 .. code-block:: json
@@ -42,7 +42,7 @@ Estructura JSON/FHIR de salida
            "id": "16329928",
            "text": {
                "status": "Registrado",
-               "div": "    
+               "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> </div>"
            },
            "identifier": [
                {
@@ -96,13 +96,6 @@ Estructura JSON/FHIR de salida
 
 
 
-
-
-
-
-
-
-
 Estructura JSON
 ---------------
 
@@ -110,76 +103,52 @@ Este es un ejemplo de salida en formato JSON del metódo `/prestadores`
 
 .. code-block:: json
 
-   {
-      "headers":[
-         "habilitadora",
-         "nombres",
-         "regiónPrestador",
-         "rut",
-         "searchRegionTrabajo",
-         "sexo",
-         "telefonos",
-         "titulos",
-         "vigencia",
-         "apellidoMaterno",
-         "apellidoPaterno",
-         "codigoBusqueda",
-         "comunaPrestador",
-         "direccion",
-         "especialidad",
-         "estado",
-         "email",
-         "fechaNacimiento"
-      ],
-      "data":[
-         [
-            "Centro de Formación Técnica INACAP",
-            "Bernarda Ivette",
-            "",
-            "16329928",
-            "VIII Región del Biobío|Región del Bío Bío",
-            "Femenino",
-            "",
-            "Técnico de Nivel Superior en Enfermería",
-            "",
-            "Macaya",
-            "Neira",
-            "Técnico en Nivel Superior en Salud",
-            "",
-            "",
-            "",
-            "Registrado",
-            "",
-            "02-12-1986"
-         ]
-      ],
-      "cols":18,
-      "rows":2,
-      "length":2,
-      "timestamp":0
-   }
+{
+  "apiVersion": "1.0",
+  "prestador":  {
+        "rut": 16329928,
+        "nombres": "Bernarda Ivette",
+        "apellidoPaterno": "Neira",
+        "apellidoMaterno": "Macaya",
+        "sexo": "Femenino",
+        "fechaNacimiento": "02-12-1986",
+        "titulos": "Técnico de Nivel Superior en Enfermería",
+        "especialidades": null,
+        "habilitadora": "Centro de Formación Técnica INACAP",
+        "vigencia": null,
+        "codigoBusqueda": "Técnico en Nivel Superior en Salud",
+        "regionPrestador": null,
+        "comunaPrestador": null,
+        "searchRegionTrabajo": "VIII Región del Biobío|Región del Bío Bío" ,
+        "telefonos": null,
+        "direccion": null,
+        "email": null,
+        "estado": "Registrado"
+   } ,
+ "timestamp": 0
+}
 
 
 Diccionario
 -----------
-`habilitadora`: Nombre de la institución que entrega la matrícula habilitante
-`nombres`: Nombres del prestador consultado
-`regiónPrestador`: Región en la que se registró el prestador
 `rut`: RUT, identificador único
-`searchRegionTrabajo`: Regiones en las que se encuentra inscripto el prestador
-`sexo`: Sexo
-`telefonos`: Teléfonos de contacto
-`titulos`: Títulos habilitantes
-`vigencia`: Vigencia de la matrícula
-`apellidoMaterno`: Apellido materno 
+`nombres`: Nombres del prestador consultado
 `apellidoPaterno`: Apellido paterno
-`codigoBusqueda`: Título habilitante
-`comunaPrestador`: Comuna en la que se encuentra inscripto
-`direccion`: Dirección 
-`especialidad`: Especialidad principal registrada
-`estado`: Estado del prestador, su único valor es "Registrado"
-`email`: Correo electrónico de contacto
+`apellidoMaterno`: Apellido materno
+`sexo`: Sexo
 `fechaNacimiento`: Fecha de nacimiento expresada en formato dd-mm-yyyy
+`titulos`: Títulos habilitantes
+`especialidad`: Especialidad principal registrada
+`habilitadora`: Nombre de la institución que entrega la matrícula habilitante
+`vigencia`: Vigencia de la matrícula
+`codigoBusqueda`: Título habilitante
+`regionPrestador`: Región en la que se registró el prestador
+`comunaPrestador`: Comuna en la que se encuentra inscripto
+`searchRegionTrabajo`: Regiones en las que se encuentra inscripto el prestador
+`telefonos`: Teléfonos de contacto
+`direccion`: Dirección
+`email`: Correo electrónico de contacto
+`estado`: Estado del prestador, su único valor es "Registrado"
 
 
 
@@ -195,127 +164,71 @@ Ejemplo de salida
 
 .. code-block:: json
 
-   {
-       "headers": [
-           "regionEst",
-           "estado",
-           "rutEstablecimiento",
-           "fechaActivacion",
-           "rut",
-           "fechaAntecedente",
-           "sexo",
-           "fechaNacimiento",
-           "tipoAntecedente",
-           "nombres",
-           "nombreFantasia",
-           "nomEstablecimiento",
-           "nroRegistro",
-           "observacion",
-           "procedencia",
-           "apellidoMaterno",
-           "apellidoPaterno",
-           "claseAntecedente",
-           "codigoBusqueda",
-           "codAntecedente",
-           "comuna",
-           "comunaEst",
-           "direccion",
-           "dirEstablecimiento"
-       ],
-       "data": [
-           [
-               "",
-               "Registrado",
-               "",
-               "",
-               "8120308",
-               "16-10-2012",
-               "Masculino",
-               "",
-               "T",
-               "Jose Orlando",
-               "CFT Santo Tomás",
-               "",
-               "152069",
-               "",
-               "CFT Santo Tomás",
-               "Abarca",
-               "Arevalo",
-               "Título",
-               "Técnico en Nivel Superior en Salud",
-               "Técnico en Enfermería de Nivel Superior",
-               "",
-               "",
-               "",
-               ""
-           ],
-           [
-               "",
-               "Registrado",
-               "",
-               "",
-               "8120308",
-               "27-05-1992",
-               "Masculino",
-               "12-04-1959",
-               "T",
-               "José Orlando",
-               "SS Metropolitano Norte",
-               "",
-               "152069",
-               "",
-               "SEREMI Región Metropolitana",
-               "Abarca",
-               "Arévalo",
-               "Título",
-               "Auxiliares de Enfermería",
-               "Auxiliar de Enfermería",
-               "",
-               "",
-               "",
-               ""
-           ]
-       ],
-       "cols": 24,
-       "rows": 3,
-       "length": 3,
-       "timestamp": 0
-   }
+{
+    "apiVersion": "1.0",
+    "antecedentes": [
+        {
+        "rut": 16329928,
+        "nombres": "Bernarda Ivette",
+        "apellidoPaterno": "Neira" ,
+        "apellidoMaterno": "Macaya" ,
+        "sexo": "Femenino" ,
+        "fechaNacimiento": "02-12-1986" ,
+        "codigoBusqueda": "Técnico en Nivel Superior en Salud" ,
+        "comuna": null,
+        "direccion": null,
+        "rutEstablecimiento": null,
+        "nomEstablecimiento": null,
+        "nombreFantasia": "CFT INACAP" ,
+        "regionEst": null,
+        "comunaEst": null,
+        "dirEstablecimiento": null,
+        "fechaAntecedente": "06-06-2008" ,
+        "codAntecedente": "Técnico de Nivel Superior en Enfermería" ,
+        "tipoAntecedente": "T" ,
+        "claseAntecedente": "Título" ,
+        "observacion": null,
+        "procedencia": "Centro de Formación Técnica INACAP" ,
+        "fechaActivacion": "28-09-2011" ,
+        "nroRegistro": 131072,
+        "estado": "Registrado"
+        }
 
+    ],
+    "filas": 1,
+    "total": 1,
+    "timestamp": 0
+}
 
 
 Diccionario
 -----------
 
-`regionEst`: 
-`estado`: 
-`rutEstablecimiento`: 
-`fechaActivacion`: 
-`rut`: 
-`fechaAntecedente`: 
-`sexo`: 
-`fechaNacimiento`: 
-`tipoAntecedente`: 
-`nombres`: 
-`nombreFantasia`: 
-`nomEstablecimiento`: 
-`nroRegistro`: 
-`observacion`: 
-`procedencia`: 
-`apellidoMaterno`: 
-`apellidoPaterno`: 
-`claseAntecedente`: 
-`codigoBusqueda`: 
-`codAntecedente`: 
-`comuna`: 
-`comunaEst`: 
-`direccion`: 
-`dirEstablecimient`: 
-
-
+`rut`: RUT, identificador único
+`nombres`: Nombres del prestador consultado
+`apellidoPaterno`: Apellido paterno
+`apellidoMaterno`: Apellido materno
+`sexo`: Sexo
+`fechaNacimiento`: Fecha de nacimiento expresada en formato dd-mm-yyyy
+`codigoBusqueda`: Nombre descriptivo del antecedente
+`comuna`: Comuna en la que se encuentra inscripto
+`direccion`: Dirección
+`rutEstablecimiento`: RUT, idendificador único del establecimiento que otorgó el antecedente
+`nomEstablecimiento`: Nombre del establecimiento
+`nombreFantasia`: Nombre de fantasía del establecimiento
+`regionEst`: Región del establecimiento
+`comunaEst`: Comuna del establecimiento
+`dirEstablecimiento`: Dirección del establecimiento
+`fechaAntecedente`: Fecha del antecedente
+`codAntecedente`: Código del antecedente
+`tipoAntecedente`: Tipo del antecedente
+`claseAntecedente`: Clase del antecedente
+`observacion`: Observaciones complementarias
+`procedencia`: Nombre del establecimiento que otorgó el antecedente
+`fechaActivacion`: Fecha de alta del antecedente
+`nroRegistro`: Identificador interno de la Superintendencia de Salud
+`estado`: Estado del prestador, su único valor es "Registrado"
 
 
 Usabilidad
 ==========
-
-

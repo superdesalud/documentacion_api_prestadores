@@ -11,11 +11,11 @@ Para hacer llamadas a esta API se requerirá un código de acceso (AUTH KEY) que
 Autorización
 ============
 
-Una vez autenticado en SuperSalud Desarrolladores podrás obtener tu AUTH KEY ingresando a cada API. 
+Una vez autenticado en SuperSalud Desarrolladores podrás obtener tu AUTH KEY ingresando a cada API.
 
 Las AUTH KEY son únicas y deben mantenerse en secreto. En caso requieran una AUTH KEY pública deben contactarse con el equipo de SuperSalud Desarrolladores.
 
-Los métodos públicos podrán ser consultados mediante la registración en SuperSalud Desarrolladores. En cambio, para acceder a métodos privados, el equipo de Energia Desarrolladores debe previamente autorizarlo.
+Los métodos públicos podrán ser consultados mediante la registración en SuperSalud Desarrolladores. En cambio, para acceder a métodos privados, el equipo de SuperSalud Desarrolladores debe previamente autorizarlo.
 
 Si un método es despublicado o borrado, no podrá consultarlo.
 
@@ -27,11 +27,11 @@ Las AUTH KEY solo permiten operaciones de lectura.
 Errores
 =======
 
-La API de SuperSalud Desarrolladores usa respuesta HTTP convencionales para indicar el éxito o el fracaso de una llamada a la API. Siguiendo los lineamientos HTTP los códigos de rango 2xx indican éxito y los códigos de rango 4xx indicana un error.
+La API de SuperSalud Desarrolladores por defecto usa respuesta HTTP convencionales para indicar el éxito o el fracaso de una llamada a la API. Siguiendo los lineamientos HTTP los códigos de rango 2xx indican éxito y los códigos de rango 4xx indican un error.
 
 
 - ParseError: Se han enviado erróneamente los argumentos al método "400 Bad Request".
-- AuthenticationFailed: Error de autenticación "401 Unauthenticated" 
+- AuthenticationFailed: Error de autenticación "401 Unauthenticated"
 - NotAuthenticated: El query viene sin autenciación "401 Unauthenticated"
 - PermissionDenied: Error de acceso no permitido "403 Forbidden".
 - NotFound: El recurso no se encuenta "404 Not Found".
@@ -42,38 +42,15 @@ La API de SuperSalud Desarrolladores usa respuesta HTTP convencionales para indi
 - ValidationError: Parámetros inválidos "400 Bad Request".
 - UnexpectedError: Error inesperado "500 internal Server".
 
+Algunos métodos pueden responder con errores específicos que se encuentran documentados en la sección correspondiente a cada método.
+
 
 Paginación
 ==========
 
-Todos los métodos de listado de recursos de la API tienen el funcionamiento de paginado. Cualquiera puede recibir los siguientes parámetros: 
+Todos los métodos de listado de recursos de la API tienen el funcionamiento de paginado. Cualquiera puede recibir el siguiente parámetro:
 
-- limit: cantidad de resultados por búsqueda
-- offset: número de resultado a partir del cual se realiza la búsqueda.
-- page: posición en página de resultados
-
-
-Un ejemplo de respuesta con limit igual a 2 podría ser
-
-.. code-block:: json
-
-  {
-   "headers":[
-      "Fecha",
-      "Valor"
-   ],
-   "data":[
-      [
-         "02-01-1984",
-         "87.54"
-      ]
-   ],
-   "cols":2,
-   "rows":2,
-   "length":12653,
-   "timestamp":1534922262659
-    }
-
+- from: página de resultados
 
 
 Versiones
