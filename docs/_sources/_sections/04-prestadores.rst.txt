@@ -236,7 +236,3 @@ fechaActivacion            Fecha de alta del antecedente
 nroRegistro                Identificador interno de la Superintendencia de Salud
 estado                     Estado del prestador, su único valor es "Registrado"
 ===================        =====================================================
-
-
-Usabilidad
-==========
