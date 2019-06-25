@@ -94,6 +94,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="03-metodos.html">3. Métodos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04-prestadores.html">4. Prestadores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-afiliados.html">5. Afiliados</a></li>
 </ul>
 
             
@@ -168,14 +169,14 @@
 <h2>Autorización<a class="headerlink" href="#autorizacion" title="Permalink to this headline">¶</a></h2>
 <p>Una vez autenticado en SuperSalud Desarrolladores podrás obtener tu AUTH KEY ingresando a cada API.</p>
 <p>Las AUTH KEY son únicas y deben mantenerse en secreto. En caso requieran una AUTH KEY pública deben contactarse con el equipo de SuperSalud Desarrolladores.</p>
-<p>Los métodos públicos podrán ser consultados mediante la registración en SuperSalud Desarrolladores. En cambio, para acceder a métodos privados, el equipo de Energia Desarrolladores debe previamente autorizarlo.</p>
+<p>Los métodos públicos podrán ser consultados mediante la registración en SuperSalud Desarrolladores. En cambio, para acceder a métodos privados, el equipo de SuperSalud Desarrolladores debe previamente autorizarlo.</p>
 <p>Si un método es despublicado o borrado, no podrá consultarlo.</p>
 <p>Las limitaciones de consultas se definen a nivel global de API o por método consultado. Puede ver el detalle de los límites en cada método.</p>
 <p>Las AUTH KEY solo permiten operaciones de lectura.</p>
 </div>
 <div class="section" id="errores">
 <h2>Errores<a class="headerlink" href="#errores" title="Permalink to this headline">¶</a></h2>
-<p>La API de SuperSalud Desarrolladores usa respuesta HTTP convencionales para indicar el éxito o el fracaso de una llamada a la API. Siguiendo los lineamientos HTTP los códigos de rango 2xx indican éxito y los códigos de rango 4xx indicana un error.</p>
+<p>La API de SuperSalud Desarrolladores por defecto usa respuesta HTTP convencionales para indicar el éxito o el fracaso de una llamada a la API. Siguiendo los lineamientos HTTP los códigos de rango 2xx indican éxito y los códigos de rango 4xx indican un error.</p>
 <ul class="simple">
 <li>ParseError: Se han enviado erróneamente los argumentos al método “400 Bad Request”.</li>
 <li>AuthenticationFailed: Error de autenticación “401 Unauthenticated”</li>
@@ -189,34 +190,14 @@
 <li>ValidationError: Parámetros inválidos “400 Bad Request”.</li>
 <li>UnexpectedError: Error inesperado “500 internal Server”.</li>
 </ul>
+<p>Algunos métodos pueden responder con errores específicos que se encuentran documentados en la sección correspondiente a cada método.</p>
 </div>
 <div class="section" id="paginacion">
 <h2>Paginación<a class="headerlink" href="#paginacion" title="Permalink to this headline">¶</a></h2>
-<p>Todos los métodos de listado de recursos de la API tienen el funcionamiento de paginado. Cualquiera puede recibir los siguientes parámetros:</p>
+<p>Todos los métodos de listado de recursos de la API tienen el funcionamiento de paginado. Cualquiera puede recibir el siguiente parámetro:</p>
 <ul class="simple">
-<li>limit: cantidad de resultados por búsqueda</li>
-<li>offset: número de resultado a partir del cual se realiza la búsqueda.</li>
-<li>page: posición en página de resultados</li>
+<li>from: página de resultados</li>
 </ul>
-<p>Un ejemplo de respuesta con limit igual a 2 podría ser</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
- <span class="nt">&quot;headers&quot;</span><span class="p">:[</span>
-    <span class="s2">&quot;Fecha&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Valor&quot;</span>
- <span class="p">],</span>
- <span class="nt">&quot;data&quot;</span><span class="p">:[</span>
-    <span class="p">[</span>
-       <span class="s2">&quot;02-01-1984&quot;</span><span class="p">,</span>
-       <span class="s2">&quot;87.54&quot;</span>
-    <span class="p">]</span>
- <span class="p">],</span>
- <span class="nt">&quot;cols&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
- <span class="nt">&quot;rows&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
- <span class="nt">&quot;length&quot;</span><span class="p">:</span><span class="mi">12653</span><span class="p">,</span>
- <span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="mi">1534922262659</span>
-  <span class="p">}</span>
-</pre></div>
-</div>
 </div>
 <div class="section" id="versiones">
 <h2>Versiones<a class="headerlink" href="#versiones" title="Permalink to this headline">¶</a></h2>

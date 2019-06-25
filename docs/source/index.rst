@@ -11,8 +11,10 @@ Contenido
    2. Introducción <../_sections/02-intro>
 
    3. Métodos <../_sections/03-metodos>
-   
+
    4. Prestadores <../_sections/04-prestadores>
+
+   5. Afiliados <../_sections/05-afiliados>
 
 
 Esperamos que disfruten y utilicen de manera exitosa la plataforma SuperSalud Desarrolladores.
