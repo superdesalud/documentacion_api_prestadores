@@ -83,7 +83,7 @@ De manera que para consultar métodos con parámetros, debe enviarse el nombre d
 Filtrar los resultados de una vista
 ------------------------------------
 
-La API de SuperSalud Desarrolladores permite a sus usuarios filtrar los resultados obtenidos durante la solicitud de un método utilizando la siguiente sintaxis:
+La API de JUNAEB Desarrolladores permite a sus usuarios filtrar los resultados obtenidos durante la solicitud de un método utilizando la siguiente sintaxis:
 
 ::
 
@@ -151,8 +151,8 @@ Convierte a string aplicando el displayFormat configurado en la vista: ``applyFo
 NUMBER y DATES como double: ``applyFormat=-1``
 
 
-Agrupaciones y Funciones sobre vistas de datos
-----------------------------------------------
+Agrupaciones y Funciones
+------------------------
 
 Puedes aplicar algunas FUNCIONES y AGRUPACIONES sobre los datos de una vista. Las operaciones se realizan a demanda sobre un juego de columnas definido en una llamada API y asociados a través de dos parámetros ``groupBy`` y ``function``. El resultado puede ser reutilizado como una fuente tipo web service REST/JSON para crear nuevos recursos de datos (vistas, visualizaciones) en el área de trabajo. Las funciones disponibles actualmente son SUM (suma), COUNT (contar), y AVG (promedio).
 

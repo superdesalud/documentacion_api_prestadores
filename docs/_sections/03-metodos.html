@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="API Prestadores" href="04-prestadores.html" />
+    <link rel="next" title="API Tarjeta Nacional Estudiantil" href="04-tne.html" />
     <link rel="prev" title="Introducción" href="02-intro.html" /> 
 
   
@@ -93,11 +93,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#ordenar-los-datos">Ordenar los Datos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#paginar-los-resultados">Paginar los resultados</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#establecer-formato-de-valores-numericos">Establecer formato de valores númericos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#agrupaciones-y-funciones-sobre-vistas-de-datos">Agrupaciones y Funciones sobre vistas de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#agrupaciones-y-funciones">Agrupaciones y Funciones</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="04-prestadores.html">4. Prestadores</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05-afiliados.html">5. Afiliados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-tne.html">4. Prestadores</a></li>
 </ul>
 
             
@@ -226,7 +225,7 @@
 </div>
 <div class="section" id="filtrar-los-resultados-de-una-vista">
 <h2>Filtrar los resultados de una vista<a class="headerlink" href="#filtrar-los-resultados-de-una-vista" title="Permalink to this headline">¶</a></h2>
-<p>La API de SuperSalud Desarrolladores permite a sus usuarios filtrar los resultados obtenidos durante la solicitud de un método utilizando la siguiente sintaxis:</p>
+<p>La API de JUNAEB Desarrolladores permite a sus usuarios filtrar los resultados obtenidos durante la solicitud de un método utilizando la siguiente sintaxis:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>GET   {url}/indicadores/v1/metodo.json?auth_key={AUTH KEY}&amp;filter0=column2[&gt;]190&amp;filter1=column0[==]Chile&amp;where=(filter and filter1)
 </pre></div>
 </div>
@@ -273,8 +272,8 @@
 <p>Convierte a string aplicando el displayFormat configurado en la vista: <code class="docutils literal notranslate"><span class="pre">applyFormat=1</span></code></p>
 <p>NUMBER y DATES como double: <code class="docutils literal notranslate"><span class="pre">applyFormat=-1</span></code></p>
 </div>
-<div class="section" id="agrupaciones-y-funciones-sobre-vistas-de-datos">
-<h2>Agrupaciones y Funciones sobre vistas de datos<a class="headerlink" href="#agrupaciones-y-funciones-sobre-vistas-de-datos" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="agrupaciones-y-funciones">
+<h2>Agrupaciones y Funciones<a class="headerlink" href="#agrupaciones-y-funciones" title="Permalink to this headline">¶</a></h2>
 <p>Puedes aplicar algunas FUNCIONES y AGRUPACIONES sobre los datos de una vista. Las operaciones se realizan a demanda sobre un juego de columnas definido en una llamada API y asociados a través de dos parámetros <code class="docutils literal notranslate"><span class="pre">groupBy</span></code> y <code class="docutils literal notranslate"><span class="pre">function</span></code>. El resultado puede ser reutilizado como una fuente tipo web service REST/JSON para crear nuevos recursos de datos (vistas, visualizaciones) en el área de trabajo. Las funciones disponibles actualmente son SUM (suma), COUNT (contar), y AVG (promedio).</p>
 <p>En primer lugar definiremos la columna que servirá para agrupar mediante el parametro <code class="docutils literal notranslate"><span class="pre">groupBy</span></code> seguido de un número que indica la jerarquía <code class="docutils literal notranslate"><span class="pre">(groupBy0=column0,</span> <span class="pre">groupBy1=column2...)</span></code>. Luego, aplicamos una función <code class="docutils literal notranslate"><span class="pre">function</span></code> aplicada en la columna sobre la que vamos a operar. Debes incluir paréntesis cuadrados (brackets) al ingresar la columna, pudiendo concatenar mas de una function agregandole un número entero empezando desde cero <code class="docutils literal notranslate"><span class="pre">(function0=SUM[column0],</span> <span class="pre">function1=COUNT[column10])</span></code>.</p>
 </div>
@@ -288,7 +287,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="04-prestadores.html" class="btn btn-neutral float-right" title="API Prestadores" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="04-tne.html" class="btn btn-neutral float-right" title="API Tarjeta Nacional Estudiantil" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="02-intro.html" class="btn btn-neutral" title="Introducción" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Anterior</a>

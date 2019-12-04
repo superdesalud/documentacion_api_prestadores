@@ -12,13 +12,11 @@ Contenido
 
    3. Métodos <../_sections/03-metodos>
 
-   4. Prestadores <../_sections/04-prestadores>
-
-   5. Afiliados <../_sections/05-afiliados>
+   4. Prestadores <../_sections/04-tne>
 
 
-Esperamos que disfruten y utilicen de manera exitosa la plataforma SuperSalud Desarrolladores.
+Esperamos que disfruten y utilicen de manera exitosa la plataforma JUNAEB Desarrolladores.
 
-Equipo Superintendecia de Salud
+Equipo JUNAEB
 
-.. |logo| image:: _static/images/logo_supersalud.png
+.. |logo| image:: _static/images/logo_junaeb.png

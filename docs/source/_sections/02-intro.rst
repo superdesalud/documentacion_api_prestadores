@@ -5,17 +5,17 @@ Introducción
 Registro
 ========
 
-Para hacer llamadas a esta API se requerirá un código de acceso (AUTH KEY) que se enviará como parámetro en cada solicitud. Para solicitar tu código de acceso debes registrarte haciendo click `aquí <https://desarrolladores.superdesalud.gob.cl/signup/>`_.
+Para hacer llamadas a esta API se requerirá un código de acceso (AUTH KEY) que se enviará como parámetro en cada solicitud. Para solicitar tu código de acceso debes registrarte haciendo click `aquí <https://desarrolladores.junaeb.cl/signup/>`_.
 
 
 Autorización
 ============
 
-Una vez autenticado en SuperSalud Desarrolladores podrás obtener tu AUTH KEY ingresando a cada API.
+Una vez autenticado en JUNAEB Desarrolladores podrás obtener tu AUTH KEY ingresando a cada API.
 
-Las AUTH KEY son únicas y deben mantenerse en secreto. En caso requieran una AUTH KEY pública deben contactarse con el equipo de SuperSalud Desarrolladores.
+Las AUTH KEY son únicas y deben mantenerse en secreto. En caso requieran una AUTH KEY pública deben contactarse con el equipo de JUNAEB Desarrolladores.
 
-Los métodos públicos podrán ser consultados mediante la registración en SuperSalud Desarrolladores. En cambio, para acceder a métodos privados, el equipo de SuperSalud Desarrolladores debe previamente autorizarlo.
+Los métodos públicos podrán ser consultados mediante la registración en JUNAEB Desarrolladores. En cambio, para acceder a métodos privados, el equipo de JUNAEB Desarrolladores debe previamente autorizarlo.
 
 Si un método es despublicado o borrado, no podrá consultarlo.
 
@@ -27,7 +27,7 @@ Las AUTH KEY solo permiten operaciones de lectura.
 Errores
 =======
 
-La API de SuperSalud Desarrolladores por defecto usa respuesta HTTP convencionales para indicar el éxito o el fracaso de una llamada a la API. Siguiendo los lineamientos HTTP los códigos de rango 2xx indican éxito y los códigos de rango 4xx indican un error.
+La API de JUNAEB Desarrolladores por defecto usa respuesta HTTP convencionales para indicar el éxito o el fracaso de una llamada a la API. Siguiendo los lineamientos HTTP los códigos de rango 2xx indican éxito y los códigos de rango 4xx indican un error.
 
 
 - ParseError: Se han enviado erróneamente los argumentos al método "400 Bad Request".

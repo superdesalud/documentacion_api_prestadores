@@ -1,9 +1,9 @@
 -------------------------------------------
 
-Documentación API de SuperSalud Desarrolladores / Superintentencia de Salud
+Documentación API de JUNAEB Desarrolladores / Junta Nacional de Auxilio Escolar y Becas
 
 -------------------------------------------
 
-- Documentación: https://superdesalud.github.io/documentacion_api_prestadores/
+- Documentación: ###############
 
-- Portal SuperSalud Desarrolladores: https://desarrolladores.superdesalud.gob.cl
+- Portal SuperSalud Desarrolladores: #########
